@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: block;
+    color: #3C3C3C;
+}
+header{
+    /*background: aquamarine;*/
+    width: 100%;
+    margin-top: 1%;
+}
+nav {
+    height: 4%;
+    width: 84%;
+    margin-right: 0;
+    position: fixed;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    position: relative;
+    margin-left: 5%;
+    font-size: calc(100vw * 23 / 1920);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*margin-top: 10%;*/
+}
+.intro img{
+    margin-right: 2%;
+}
+
+table, th,tr,td{
+    justify-content: center;
+    align-items: center;
+   font-size: calc(100vw * 15 / 1920);
+
+    border: solid 2px #3C3C3C;
+    border-collapse: collapse;
+    padding: 8px;
+}
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210vh;
+    width: 100%;
+    margin-top: 10%;
+
+}
+.project-container{
+
+}
+.project ul {
+    list-style: none;
+    padding: 0; /* 리스트 내부 여백 제거 */
+    margin: 0 auto; /* 가로축 중앙 정렬 */
+    width: 60%; /* 넓이를 조정하여 중앙 정렬 */
+    border-left: none; /* 테두리가 필요 없다면 제거 */
+    text-align: center; /* 텍스트를 중앙으로 정렬 */
+}
+
+.project li {
+    opacity: 0;
+    position: relative;
+    font-weight: bold;
+    font-size: calc(100vw * 18 / 1920);
+    transition: all 1.5s ease-out;
+    text-align: center; /* 리스트 항목 텍스트 중앙 정렬 */
+    left: 0; /* 요소가 치우치지 않도록 초기화 */
+}
+.project li:nth-child(odd) {
+    left: 20%; /* 왼쪽 이동 값 초기화 */
+}
+
+.project li:nth-child(even) {
+    left: -20%; /* 오른쪽 이동 값 초기화 */
+}
+.project li.show {
+    animation: show 0.5s ease-in-out forwards;
+}
+.project img{
+    width: 40%;
+}
+@keyframes show {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+footer{
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.wide{
+    width: 32.5%
+}
+.space{
+    width: 32.5%;
+}
+.sort{
+    color: #a9a9a9;
+}
+.highlight{
+    background-color: #F7FF13;
+    font-size: calc(100vw * 15 / 1920);
+
+}
+footer{
+    background-color: #F7FF13;
+    margin-top: 10%;
+    color: #3C3C3C;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.project p{
+    font-weight: lighter;
+    color: #a9a9a9;
+    margin-top: 1%;
+}
+
+@media (max-width: 900px) {
+    /* 이미지 중앙 정렬 */
+    img {
+        display: block; /* 인라인 이미지를 블록 요소로 변경 */
+        margin-left: auto; /* 좌측 여백 자동 설정 */
+        margin-right: auto; /* 우측 여백 자동 설정 */
+        width: 80%; /* 반응형 크기 조정 */
+    }
+
+    /* 테이블 중앙 정렬 */
+    table {
+        margin-left: auto; /* 테이블 좌측 여백 자동 설정 */
+        margin-right: auto; /* 테이블 우측 여백 자동 설정 */
+        text-align: center; /* 테이블 내부 텍스트 중앙 정렬 */
+        width: 80%; /* 테이블 너비 조정 */
+    }
+    table, th,tr,td{
+        border: solid 1.5px #3C3C3C;
+    }
+    /* 프로젝트 이미지 */
+    .project img {
+        display: block; /* 인라인 이미지를 블록 요소로 변경 */
+        margin-left: auto; /* 좌측 여백 자동 설정 */
+        margin-right: auto; /* 우측 여백 자동 설정 */
+        width: 80%; /* 프로젝트 이미지 크기 조정 */
+    }
+
+    /* 소개 섹션 중앙 정렬 */
+    .intro {
+        text-align: center; /* 텍스트 중앙 정렬 */
+        display: flex; /* 플렉스 박스로 변경 */
+        flex-direction: column; /* 수직 방향 정렬 */
+        justify-content: center; /* 콘텐츠 수직 중앙 정렬 */
+        align-items: center; /* 콘텐츠 수평 중앙 정렬 */
+        height: 110vh;
+    }
+    .project {
+        height: 120vh;
+    }
+    .project li {
+        font-size: calc(100vw * 23 / 1920);
+        margin-bottom: 5%;
+    }
+    .project li:nth-child(odd) {
+        left: 0; /* 왼쪽 이동 값 초기화 */
+    }
+
+    .project li:nth-child(even) {
+        left: 0; /* 오른쪽 이동 값 초기화 */
+    }
+    table, th,tr,td{
+        font-size: calc(100vw * 23 / 1920);
+    }
+    .intro img{
+        margin-left: auto; /* 테이블 좌측 여백 자동 설정 */
+        margin-right: auto; /* 테이블 우측 여백 자동 설정 */
+        text-align: center;
+    }
+    .highlight{
+        font-size: calc(100vw * 23 / 1920);
+    }
+    footer{
+        font-size: calc(100vw * 23 / 1920);
+        height: 8vh;
+    }
+}
