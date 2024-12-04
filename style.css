@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: block;
+    color: #3C3C3C;
+}
+header{
+    /*background: aquamarine;*/
+    width: 100%;
+    margin-top: 1%;
+}
+nav {
+    height: 4%;
+    width: 84%;
+    margin-right: 0;
+    position: fixed;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    position: relative;
+    margin-left: 5%;
+    font-size: calc(100vw * 23 / 1920);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*margin-top: 10%;*/
+}
+.intro img{
+    margin-right: 2%;
+}
+
+table, th,tr,td{
+    justify-content: center;
+    align-items: center;
+   font-size: calc(100vw * 15 / 1920);
+
+    border: solid 2px #3C3C3C;
+    border-collapse: collapse;
+    padding: 8px;
+}
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 330vh;
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 5%;
+}
+.project ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+    border-left: none;
+    text-align: center;
+}
+
+.project li {
+    opacity: 0;
+    position: relative;
+    font-weight: bold;
+    font-size: calc(100vw * 18 / 1920);
+    transition: all 1.5s ease-out;
+    text-align: center;
+    left: 0;
+    margin-top: 5%;
+}
+.project li:nth-child(odd) {
+    left: 21%;
+}
+
+.project li:nth-child(even) {
+    left: -21%;
+}
+.project li.show {
+    animation: show 0.5s ease-in-out forwards;
+}
+.project img{
+    width: 60%;
+}
+@keyframes show {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+footer{
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sort{
+    color: #a9a9a9;
+    text-align: center;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    padding-top: 5%;
+}
+.highlight{
+    background-color: #F7FF13;
+    font-size: calc(100vw * 15 / 1920);
+
+}
+.name{
+    font-size: calc(100vw * 30 / 1920);
+}
+.job{
+    font-size: calc(100vw * 20 / 1920);
+}
+footer{
+    background-color: #F7FF13;
+    margin-top: 10%;
+    color: #3C3C3C;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-top: 2px solid #3C3C3C;
+}
+.project p{
+    font-weight: lighter;
+    color: #a9a9a9;
+    margin-top: 1%;
+}
+.wide{
+    width: 13%;
+}
+button{
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 80%;
+    }
+    table, th,tr,td{
+        border: solid 1.5px #3C3C3C;
+    }
+    .project img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+
+    .intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+    }
+    .project {
+        height: 140vh;
+    }
+    .project li {
+        font-size: calc(100vw * 23 / 1920);
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .project li:nth-child(odd) {
+        left: 0;
+    }
+
+    .project li:nth-child(even) {
+        left: 0;
+    }
+    table, th,tr,td{
+        font-size: calc(100vw * 23 / 1920);
+    }
+    .intro img{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .highlight{
+        font-size: calc(100vw * 23 / 1920);
+    }
+    footer{
+        font-size: calc(100vw * 23 / 1920);
+        height: 8vh;
+        border-top: 1.5px solid #3C3C3C;
+    }
+    button{
+        font-size: calc(100vw * 15 / 1920);
+    }
+}
